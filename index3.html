@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <iframe id='dynamic-content' src='refresh.php' />
+        <meta charset="utf-8">
+        <title>Learning HTML </title>
+    </head>
+    <body>
+	
+	 <p>
+	   <?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "learning";
+		 
+
+// Create connection
+$conn = new mysqli($servername, $username, $password,$dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+echo "Connected successfully";
+
+		 $sql = "INSERT INTO learn (ID, NOMBRE, PW)
+VALUES (NULL, 'Dop', 'john@example.com')";
+
+if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+	
+}
+		 
+		 
+
+		 
+		 
+		 
+		 
+		 
+		 
+$conn->close();
+		 
+		 
+		 
+		 
+		 
+		 ?> 
+	   
+	   
+	   
+	   
+	   <table width="219" border="3">
+  <tbody>
+    <tr>
+      <td width="59">lat</td>
+      <td width="140">2</td>
+    </tr>
+    <tr>
+      <td>long</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td height="54">tiem</td>
+      <td><iframe id='dynamic-content2' src='refresh.php' /></td>
+    </tr>
+  </tbody>
+</table>
+
+	   
+	   
+	   
+	   
+	   
+	   
+   </p>
+	 
+	 
+   </body>
+</html>
+
+
